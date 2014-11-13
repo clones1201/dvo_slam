@@ -167,7 +167,7 @@ public:
   static inline void compute3rdRowOfJacobianOfTransformation(const dvo::core::Vector4& p, dvo::core::Vector6& j);
 
   typedef std::vector<Eigen::Vector2f, Eigen::aligned_allocator<Eigen::Vector2f> > ResidualVectorType;
-  typedef std::vector<float> WeightVectorType;
+  typedef std::vector<float, Eigen::aligned_allocator<float> > WeightVectorType;
 private:
   struct IterationContext
   {
